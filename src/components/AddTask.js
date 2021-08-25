@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const AddTask = ({setTasks}) => {
+export const AddTask = ({setTasks, setIdTask}) => {
 
     const [inputValue, setInputValue] = useState('');
 
@@ -15,6 +15,8 @@ export const AddTask = ({setTasks}) => {
         if (inputValue.trim().length > 2){
             setTasks(tasks => [...tasks, inputValue])
             setInputValue('');
+
+            setIdTask(idTask => idTask + 1);
         }
     }
 
@@ -23,7 +25,7 @@ export const AddTask = ({setTasks}) => {
             <input
                 type="text"
                 value={inputValue}
-                onChange={handleInputChamge}
+                onChange={handleInputChamge}                
             />
         </form>
     )
