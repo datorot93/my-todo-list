@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types';
 
 export const AddTask = ({setTasks, setIdTask}) => {
 
@@ -29,4 +30,11 @@ export const AddTask = ({setTasks, setIdTask}) => {
             />
         </form>
     )
+
+    
 }
+
+// AddTask.PropTypes = {
+//     setTasks: PropTypes.func,
+//     setIdTask: PropTypes.func
+// }
